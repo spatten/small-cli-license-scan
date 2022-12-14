@@ -3,6 +3,15 @@ vendoredDependencies:
   forceRescans: false
   scanMethod: CLILicenseScan
   licenseScanPathFilters:
-    only:
-      - "**/*.rb"
-      - "**/LICENSE"
+    # only:
+    #   - "**/*.rb"
+    #   - "**/LICENSE"
+    exclude:
+      - ./.git/**
+      - "**/.gitignore"
+      - "**/fossa-deps.yml"
+      - "**/*.gz"
+      - ./.fossa.yml
+      - "**/fossa.telemetry.json"
+      - "**/*_external.rb"
+      - "**/src/**.rb"
